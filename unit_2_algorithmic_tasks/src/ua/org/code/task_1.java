@@ -1,13 +1,14 @@
 package ua.org.code;
 
-import java.io.IOException;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class task_1 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
         String str = in.nextLine();
@@ -25,6 +26,7 @@ public class task_1 {
             res += i;
         }
 
-        System.out.println(res);
+        NumberFormat nf = new DecimalFormat("#.####");
+        System.out.println(nf.format(res));
     }
 }
